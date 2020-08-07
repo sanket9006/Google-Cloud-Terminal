@@ -1,5 +1,5 @@
 #1
-# Start a Kubernetes cluster
+# Start a Kubernetes cluster managed by Kubernetes Engine. Name the cluster webfrontend and configure it to run 2 nodes
 gcloud container clusters create webfrontend --zone $MY_ZONE --num-nodes 2
 
 #2
@@ -25,3 +25,7 @@ kubectl expose deployment nginx --port 80 --type LoadBalancer
 #6
 # View services
 kubectl get services
+
+#7
+# Scale up the number of pods running on your service
+kubectl scale deployment nginx --replicas 3

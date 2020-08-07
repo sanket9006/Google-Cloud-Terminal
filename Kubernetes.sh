@@ -14,6 +14,10 @@ kubectl create deploy nginx --image=nginx:1.17.10
 
 #4
 # View the pod running 
+#NAME                     READY   STATUS    RESTARTS   AGE
+#nginx-5f7d5d7689-557b2   1/1     Running   0          114s
+#nginx-5f7d5d7689-pfb69   1/1     Running   0          114s
+#nginx-5f7d5d7689-rn96l   1/1     Running   0          7m48s
 kubectl get pods
 
 #5
@@ -24,6 +28,8 @@ kubectl expose deployment nginx --port 80 --type LoadBalancer
 
 #6
 # View services
+# kubernetes   ClusterIP      10.51.240.1     <none>         443/TCP        8m37s
+# nginx        LoadBalancer   10.51.251.144   34.71.61.125   80:30805/TCP   81s
 kubectl get services
 
 #7

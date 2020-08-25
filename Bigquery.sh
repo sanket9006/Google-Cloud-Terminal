@@ -79,3 +79,7 @@ WHERE hits_product_v2ProductName IS NOT NULL
 GROUP BY hits_product_v2ProductCategory
 ORDER BY number_of_products DESC
 LIMIT 50
+
+
+# Link
+# https://medium.com/@prithishghosh/how-to-solve-insights-from-data-with-bigquery-challenge-lab-8da989840983

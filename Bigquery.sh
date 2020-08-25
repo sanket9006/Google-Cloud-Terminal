@@ -83,3 +83,4 @@ LIMIT 50
 
 # Link
 # https://medium.com/@prithishghosh/how-to-solve-insights-from-data-with-bigquery-challenge-lab-8da989840983
+# https://chriskyfung.github.io/blog/qwiklabs/Insights-from-Data-with-BigQuery-Challenge-Lab

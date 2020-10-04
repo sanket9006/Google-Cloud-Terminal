@@ -2,6 +2,10 @@
 # Start a Kubernetes cluster managed by Kubernetes Engine. Name the cluster webfrontend and configure it to run 2 nodes
 gcloud container clusters create webfrontend --zone $MY_ZONE --num-nodes 2
 
+# create a Kubernetes Engine cluster to deploy Spinnaker and the sample application
+gcloud container clusters create spinnaker-tutorial \
+    --machine-type=n1-standard-2
+
 #2
 # check your installed version of Kubernetes
 kubectl version

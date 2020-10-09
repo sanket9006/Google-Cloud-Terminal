@@ -1,5 +1,5 @@
 # 1
-# Create the service account: s
+# Create the service account: sf
 
     gcloud iam service-accounts create spinnaker-account \
         --display-name spinnaker-account

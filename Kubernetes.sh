@@ -6,6 +6,10 @@ gcloud container clusters create webfrontend --zone $MY_ZONE --num-nodes 2
 gcloud container clusters create spinnaker-tutorial \
     --machine-type=n1-standard-2
 
+gcloud container clusters create awwvision \
+    --num-nodes 2 \
+    --scopes cloud-platform
+
 #2
 # check your installed version of Kubernetes
 kubectl version

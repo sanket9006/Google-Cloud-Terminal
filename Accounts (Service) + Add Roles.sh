@@ -27,3 +27,11 @@ gcloud projects add-iam-policy-binding $PROJECT \
 # Download the service account key
 gcloud iam service-accounts keys create spinnaker-sa.json \
      --iam-account $SA_EMAIL
+
+
+# 5
+# Configure a Service Account & IAM permissions
+export SANAME=challenge
+gcloud iam service-accounts create $SANAME
+gcloud projects add-iam-policy-binding $DEVSHELL_PROJECT_ID --member=serviceAccount:$SANAME@$DEVSHELL_PROJECT_ID.iam.gserviceaccount.com --role=roles/bigquery.admin
+gcloud projects add-iam-policy-binding $DEVSHELL_PROJECT_ID --member=serviceAccount:$SANAME@$DEVSHELL_PROJECT_ID.iam.gserviceaccount.com --role=roles/storage.admin

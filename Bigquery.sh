@@ -1,3 +1,18 @@
+#1 create a dataset called taxirides:
+bq mk taxirides
+
+# 2 Run query from terminal
+bq query --use_legacy_sql=false \
+'SELECT
+   word,
+   SUM(word_count) AS count
+ FROM
+   `bigquery-public-data`.samples.shakespeare
+ WHERE
+   word LIKE "%raisin%"
+ GROUP BY
+   word'
+
 # Query 1
 SELECT
 fullVisitorId
